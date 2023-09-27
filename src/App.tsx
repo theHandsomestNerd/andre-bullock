@@ -12,11 +12,12 @@ import ModalProvider from "./components/snackbar-context/ModalProvider";
 import SnackbarProvider from "./components/modal-context/SnackbarProvider";
 import PageMux from "./components/mackenzies-mind/pages/PageMux";
 import QrCodeProvider from "./components/qr-code-context/QrCodeProvider";
-import TheOtherSide from "./components/the-drinkery/TheOtherSide";
-import TheDrinkerySpecials from "./components/the-drinkery/TheDrinkerySpecials";
+
+const ROUTING_ROUTE = 'andre-bullock'
 
 export enum RoutesEnum {
-    THN = "/the-handsomest-nerd-internal/:pageSlug",
+    MAINROUTE = `/${ROUTING_ROUTE}/:pageSlug`,
+    HOME = `/${ROUTING_ROUTE}/home`,
     ERROR = '/error'
 }
 
@@ -52,13 +53,11 @@ function App() {
 
                                                 <Grid item>
                                                     <Routes>
-                                                        <Route path={"/theOtherSide"} element={<TheOtherSide />}/>
-                                                        <Route path={"/drinkerySpecials"} element={<TheDrinkerySpecials />}/>
-                                                        <Route path={RoutesEnum.THN} element={<PageMux/>}/>
+                                                        <Route path={RoutesEnum.MAINROUTE} element={<PageMux/>}/>
                                                         <Route path={RoutesEnum.ERROR} element={<FourOhFour/>}/>
                                                         <Route path={"/*"}
                                                                element={<Navigate
-                                                                   to={'/the-handsomest-nerd-internal/home'}/>}/>
+                                                                   to={'/andre-bullock/home'}/>}/>
                                                     </Routes>
                                                 </Grid>
                                             </Grid>

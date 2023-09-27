@@ -51,10 +51,11 @@ const FooterMenuContainer: FunctionComponent<IProps> = (props: IProps) => {
                     <Logo isCenter logoImageSrc={props.pageFooterMenu.logoImageSrc} height={108}/> :
                     <Grid container item justifyContent='center'>
                         <Typography component='div' variant='h2'
-                                    style={{...rainbow, color: "#383838"}}>James <Typography display='inline'
+                                    color='primary'
+                                    style={{...rainbow, color: "#383838"}}> <Typography display='inline'
                                                                                              style={{...rainbow,}}
                                                                                              variant='h2'
-                                                                                             color='primary'>Terrell</Typography> Singleton<Typography
+                                                                                             color='primary'>Andre</Typography> Bullock<Typography
                             display='inline' style={{...rainbow,}} variant='h2'
                             color='primary'>.</Typography></Typography>
                     </Grid>}
